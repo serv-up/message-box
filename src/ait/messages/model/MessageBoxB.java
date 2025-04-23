@@ -5,7 +5,7 @@ public class MessageBoxB implements MessageBox {
 
     @Override
     public synchronized void post(String message) {
-        while (this.message != null){
+        while (this.message != null) {
             try {
                 this.wait();
             } catch (InterruptedException e) {
